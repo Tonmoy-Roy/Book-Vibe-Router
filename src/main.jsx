@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <Errorpage></Errorpage>, // kono page jodi na pay E
+    errorElement: <Errorpage></Errorpage>, // kono page jodi na pay ei page e niye jabe
     children: [
       {
         path: '/',
@@ -30,8 +30,9 @@ const router = createBrowserRouter([
         element: <Dashboard></Dashboard>,
       },
       {
-        path: 'books/:bookId',
+        path: 'books/:bookId',  //bookId bookdetails e params(string) hisebe jacche.
         element: <Bookdetails></Bookdetails>,
+        loader: () => fetch('/booksData.json'),
       },
     ]
   },
