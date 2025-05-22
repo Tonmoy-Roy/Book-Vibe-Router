@@ -12,7 +12,6 @@ const Root = () => {
                 <Outlet></Outlet>
             </div>
             {/* Navbar er child ache tai Outlet deya hoise.bakigular child nai*/}
-            <Footer></Footer>
         </div>
 
     );
