@@ -7,7 +7,11 @@ const Bookdetails = () => {
     const data = useLoaderData(); //fetch data stored
     const book = data.find(book => book.bookId === id); //path er unique id jkhn json datar sathe match kore
     //book er mddhe specific data ta ache.
-    console.log(book);
+    
+    function handleAddtoList(){
+        
+    }
+
     return (
         <div className='text-center'>
             <p className='text-center font-bold text-3xl mb-5'>Book-Details : {bookId}</p>
@@ -19,8 +23,8 @@ const Bookdetails = () => {
                     <p className='font-bold'>Book Name : {book.bookName}</p>
                     <p>Author : {book.author}</p>
                     <p className='mb-2'>Category : {book.category}</p>
-                    <button className='btn btn-outline btn-accent mr-3'>Read</button>
-                    <button className='btn btn-outline btn-accent'>Buy</button>
+                    <button onClick={handleAddtoList} className='btn btn-outline btn-accent mr-3' >Mark as Read</button>
+                    <button className='btn btn-outline btn-accent'>Add to Wishlist</button>
                 </div>
             </div>
             <p>{book.review}</p>
