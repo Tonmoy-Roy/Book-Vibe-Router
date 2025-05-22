@@ -18,7 +18,7 @@ const Book = ({ book = {} }) => {
         //         <p className=''>Ratings : {book.rating}</p>
         //     </div>
         // </div>
-        <div className="card bg-base-100 w-96 shadow-sm">
+        <div className="card bg-base-100 w-96 shadow-sm mb-5">
             <figure className='bg-blue-200 mb-5 p-5 rounded-2xl'>
                 <img className='h-[400px]' src={book.image} alt="" />
             </figure>
